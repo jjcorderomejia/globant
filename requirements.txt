@@ -1,0 +1,8 @@
+Flask
+SQLAlchemy
+psycopg2-binary
+marshmallow-sqlalchemy
+avro-python3
+boto3
+fastavro
+
