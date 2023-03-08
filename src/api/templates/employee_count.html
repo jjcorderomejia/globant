@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Department</th>
+      <th scope="col">Job</th>
+      <th scope="col">Q1</th>
+      <th scope="col">Q2</th>
+	  <th scope="col">Q3</th>
+	  <th scope="col">Q-4</th>
+    </tr>
+	{% for tab in datos %}
+	<tr>
+	<td>{{tab.department}}
+	</td>
+	<td>{{tab.job}}
+	</td>
+	<td>{{tab.q1_count}}
+	</td>
+	<td>{{tab.q2_count}}
+	</td>
+	<td>{{tab.q3_count}}
+	</td>
+	<td>{{tab.q4_count}}
+	</td>
+	</tr>
+	{% endfor %}
+  </thead>
+</table>
+</head>
+<body>
+
+</body>
+</html>
