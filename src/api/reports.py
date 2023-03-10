@@ -2,8 +2,14 @@ import os
 import psycopg2
 from flask import Flask, render_template
 import json
+from flask_basicauth import BasicAuth
 
 app = Flask(__name__)
+app.config['BASIC_AUTH_USERNAME'] = 'admin'
+app.config['BASIC_AUTH_PASSWORD'] = 'password'
+app.config['BASIC_AUTH_FORCE'] = True
+
+basic_auth = BasicAuth(app)
 
 # Define the database connection details
 DB_USERNAME = 'postgres'
@@ -14,6 +20,7 @@ DB_NAME = 'postgres'
 
 
 @app.route('/employee_count', methods=['GET'])
+@basic_auth.required
 def employee_count():
     # Connect to the PostgreSQL database
     conn = psycopg2.connect(
@@ -77,6 +84,7 @@ def employee_count():
 
 
 @app.route('/hiring', methods=['GET'])
+@basic_auth.required
 def hiring():
     # Connect to the PostgreSQL database
     conn = psycopg2.connect(
@@ -110,6 +118,7 @@ def hiring():
 
 
 @app.route('/hiring_graph', methods=['GET'])
+@basic_auth.required
 def hiring_graph():
     # Connect to the PostgreSQL database
     conn = psycopg2.connect(

@@ -6,3 +6,5 @@ avro-python3
 boto3
 fastavro
 plotly
+flask_httpauth
+flask_basicauth
