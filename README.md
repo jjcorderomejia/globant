@@ -17,19 +17,19 @@ This script migrates employee data from CSV files to a PostgreSQL database. It u
 
 ### Challenge 1
 
-For these requirements "Move historic data from files in CSV format to the new database." and "Create a Rest API service to receive new data."  execute python src/api/migrate3.py and then curl -X POST -u admin:password http://localhost:5000/parse-csv on command line.
+For these requirements "Move historic data from files in CSV format to the new database." and "Create a Rest API service to receive new data."  execute `python src/api/migrate3.py` and then `curl -X POST -u admin:password http://localhost:5000/parse-csv` on command line.
 
-For this requirement "Create a feature to backup for each table and save it in the file system in AVRO format." execute python src/scripts/backup.py
+For this requirement "Create a feature to backup for each table and save it in the file system in AVRO format." execute `python src/scripts/backup.py`
 
-For this requirement "Create a feature to restore a certain table with its backup" execute python src/scripts/restore2.py
+For this requirement "Create a feature to restore a certain table with its backup" execute `python src/scripts/restore2.py`
 
 ### Challenge 2
 
-For this requirement: "Number of employees hired for each job and department in 2021 divided by quarter. The table must be ordered alphabetically by department and job" execute python src/api/reports and then on a web browser http://localhost:5000/employee_count use this credentials when asked:  user: 'admin', password: 'password'.
+For this requirement: "Number of employees hired for each job and department in 2021 divided by quarter. The table must be ordered alphabetically by department and job" execute `python src/api/reports` and then on a web browser `http://localhost:5000/employee_count` use this credentials when asked:  user: 'admin', password: 'password'.
 
-For this requirement: "List of ids, name and number of employees hired of each department that hired more employees than the mean of employees hired in 2021 for all the departments, ordered by the number of employees hired (descending)." execute python src/api/reports and then on a web browser http://localhost:5000/hiring use this credentials when asked:  user: 'admin', password: 
+For this requirement: "List of ids, name and number of employees hired of each department that hired more employees than the mean of employees hired in 2021 for all the departments, ordered by the number of employees hired (descending)." execute `python src/api/reports` and then on a web browser `http://localhost:5000/hiring` use this credentials when asked:  user: 'admin', password: 
 
-For this requirement "Create a visual report for each requirement using your favorite tool" execute python src/api/reports and then on a web browser http://localhost:5000/hiring_graph use this credentials when asked:  user: 'admin', password: 
+For this requirement "Create a visual report for each requirement using your favorite tool" execute `python src/api/reports` and then on a web browser `http://localhost:5000/hiring_graph` use this credentials when asked:  user: 'admin', password: 
  
 ## CSV Files
 
