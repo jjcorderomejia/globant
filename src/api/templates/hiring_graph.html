@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hiring Chart</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Hiring Chart</h1>
+    <div id="chart"></div>
+    <script>
+        var chartData = JSON.parse('{{ chart_data|safe }}');
+        console.log("Chart data:", chartData);
+        Plotly.newPlot('chart', [{
+            labels: chartData.departments,
+            values: chartData.hires,
+            type: 'pie'
+        }]);
+    </script>
+</body>
+</html>

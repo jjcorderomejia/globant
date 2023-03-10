@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hiring Report</title>
+</head>
+<body>
+    <h1>Hiring Report for 2021</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Number of Hires</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item['department'] }}</td>
+                <td>{{ item['hired'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
