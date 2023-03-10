@@ -11,6 +11,7 @@ This script migrates employee data from CSV files to a PostgreSQL database. It u
 5. Run the Flask app: `python migrate2.py`
 6. Run the python file src/api/create.py for creating the  tables: departments, jobs and hired_employees
 7. Send a POST request to `http://localhost:5000/parse-csv` to migrate the data from CSV files to the database.
+8. Used a virtual environment for this project: need to execute these lines  python3.8 -m venv globant-venv    source globant-venv/bin/activate  (optional) you can use your own environment.
 
 ## Instuctions
 
